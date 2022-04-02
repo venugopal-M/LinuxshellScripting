@@ -1,0 +1,83 @@
+7-Looping Statements-1
+---
+
+whilp loop
+
+it is simple when the command is true ,it keeps executing the statements
+
+while [command
+do
+  
+  statements
+
+done
+
+-----
+
+while loop
+
+while [ condition ]
+do
+  command1
+  command2
+  command3
+  increment / decrement
+done
+
+1)initialization is done
+2) condition is checked
+3)if the condition is true then do loop statements are executed
+4)at the end of the loop increment / decrement will be done.Again condition will be checked
+5)This process will be ontinuous unless condition false
+----
+1
+
+#! /bin/bash [one.sh]
+n=1
+
+while (($n<=10)) #while [$n -le 10 ] //or while (( $n <= 10 ))
+do
+  echo "n = $n"
+  n=$(( n+1 ))
+done
+
+echo "End of the while loop."
+-----------------------------
+2
+
+#! /bin/bash [one.sh]
+n=1
+
+while [ $n -le 10 ] #while [$n -le 10 ] //or while (( $n <= 10 ))
+do
+  echo "n = $n"
+  n=$(( n+1 ))
+done
+
+echo "End of the while loop."
+
+---------
+3
+
+#! /bin/bash [one.sh]
+
+read -p "Enter starting value = " n1  #1
+read -p "Enter starting value = " n2  #2
+
+while [ $n1 -le n2 ] #or while (( $n <= 10 ))
+do
+  echo "n = $n1"
+  n1=$(( n1+1 ))
+done
+
+ echo "final n1 = $n1"
+
+echo "End of the while loop."
+
+--------------------
+
+
+
+
+
+

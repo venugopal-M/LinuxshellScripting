@@ -1,0 +1,118 @@
+controle statements-examples
+----------forloop 
+#1 /bin/bash [one.sh]
+
+read -p "Enter Number1 : "num1
+read -p "Enter Number2 : "num2
+
+for((i=num1;i<=num2;i++))
+do
+echo $i
+done
+./one.sh
+
+---------------5-controlesstatements-example-1
+
+
+#1 /bin/bash [one.sh]
+
+read -p "Enter Number1 : "num1
+read -p "Enter Number2 : "num2
+
+for((i=num1;i<=num2;i++))
+do
+echo $i
+let "$sum = ((sum+$i))"
+done
+
+echo "SUM = $sum"
+
+./one.sh
+
+
+------------
+
+#1 /bin/bash [one.sh]
+
+read -p "Enter Number1 : "num1
+read -p "Enter Number2 : "num2
+
+if (($num1<=$num2))
+then
+
+for((i=num1;i<=num2;i++))
+do
+echo $i
+let "$sum=((sum+$i))"
+done
+
+else
+for((i=num1;i>=num2;i--))
+do
+echo $i
+let "sum=(($sum+$i))"
+done
+fi
+
+echo "SUM = $sum"
+
+./one.sh
+
+---------------------------
+#! /bin/bash [two.sh]
+
+read -p "Enter Number1 : "num1
+#read -p "Enter Number2 : "num2
+
+for((i=1;i<=10;i++))
+do
+echo $i
+echo "$num1 * $i = $ (($num*i))"
+
+done
+
+---------------------------------6-controlesstatements-example-2
+#! /bin/bash [two.sh]
+
+echo -e Enter File name : \c"
+read file_name
+
+if [ -f $file_name ]
+then
+   echo "$file_name found."
+   if [-w $file_name ]
+   then
+   echo "Enter Date Here.To quit press ctrl+d."
+         cat >> $file_name
+    else
+     echo "This file do not have write permission"
+     fi
+else
+  echo "$file_name not found."
+fi
+
+Note : do not be in root user mode
+
+------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+Read a file content in Bash using LS
+case1:
+
+#!/bin/bash
+
+while read p
+do
+echo $p
+ done < hello.sh ------thr.sh
+-------------------------
+case2:
+
+#!/bin/bash
+
+cat hello.sh | while read p
+do
+  echo $p
+  done
+./four.sh
+-------------------------
+shell Functions
+
+with the help of Function, functionality of a function can be divided into smller or logical parts, which can be called to 
+perform their task. it help us to check our program part by.
+we can reuse the function ever we want
+
+function functionName () }
+        commands to be executed
+}
+
+#!/bin/bash
+
+fuction welcome()
+{
+ echo "welcome To MindTech."
+}
+
+welcome
+
+#parameterised function
+
+#!/bin/bash
+
+fuction welcome()
+{
+ echo "welcome To MindTech.we offer $1"
+
+}
+ welcome AWS
+ Welcome Devops
+ welcome pyton
+------------------------------
+#!/bin/bash non parameterised function
+
+fuction fun1()
+{
+ echo "welcome To MindTech."
+ a=read -p "Enter a : " a
+ b=read -p "Enter b : " b
+ let "c = $((a+b))"
+ echo = "SUM =$c"
+}
+
+fun1
+./fdemo.sh
+-----------------------
+parameterised function
+
+#!/bin/bash 
+
+fuction fun1()
+{
+ echo "welcome To MindTech."
+ a=read -p "Enter a : " a
+ b=read -p "Enter b : " b
+ let "c = $((a+b))"
+ echo = "SUM =$c"
+}
+
+fun1
+
+fuction fun2()
+{
+ echo "welcome To MindTech.we offer $1"
+}
+ fun2 AWS
+ fun2 Devops
+ fun2 pyton
+
+--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

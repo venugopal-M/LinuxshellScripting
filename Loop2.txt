@@ -1,0 +1,130 @@
+unitl loop
+
+until [ condition ]
+do
+  command1
+  command2
+  command3
+done
+
+note : if the condition is false then only loop executes
+-------------------------------
+#! /bin/bash[two.sh]
+
+read -p "Enter starting value = " n1 #1
+read -p "Enter Ending value = " n2 #10
+
+until [$n1 -gt $n2 ] #//or while (( $n > 10 ))
+do
+  echo "$n"
+  n1=$(( n+1 ))
+done
+
+echo "final n1 = $n1"
+echo "End of the until loop"
+
+--------------------------------
+
+for Loop
+----------
+according to the given list, it executes the commands for each item
+
+for variable in<list>
+
+do
+  
+  statements
+
+done
+
+---------------------------------
+for loop
+case1
+
+#!/bin/bash
+
+for i in {1..10}
+do
+ echo $i
+done
+---------
+case-2
+
+#!/bin/bash
+
+for i in {1..10..2}
+do
+ echo $i
+done
+----------
+case-3
+
+#!/bin/bash
+
+for i in (( i=1; i<=5 ;i++))
+do
+ echo $i
+done
+----------------
+task-1
+
+Enter starting point : 1 | 10
+
+Enter Ending point :10 | 1
+
+using any loop 
+
+sum
+-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
